@@ -3,25 +3,21 @@ package main
 import "fmt"
 
 func main() {
-	for {
-		var input int
-		fmt.Println("Input:")
-		fmt.Scan(&input)
-		if input%3 == 0 && input%5 == 0 {
+	var input int
+	fmt.Println("Enter the number range for fizzbuzz:")
+	fmt.Scan(&input)
+	for i := 1; i <= input; i++ {
+		if i%3 == 0 && i%5 == 0 {
 			fmt.Println("FizzBuzz")
-			break
 		}
-		if input%3 == 0 && input%5 != 0 {
+		if i%3 == 0 && i%5 != 0 {
 			fmt.Println("Fizz")
-			break
 		}
-		if input%3 != 0 && input%5 == 0 {
+		if i%3 != 0 && i%5 == 0 {
 			fmt.Println("Buzz")
-			break
 		}
-		if input%3 != 0 && input%5 != 0 {
-			fmt.Println(input)
-			break
+		if i%3 != 0 && i%5 != 0 {
+			fmt.Println(i)
 		}
 	}
 }
