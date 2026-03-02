@@ -14,7 +14,7 @@ func main() {
 
 		fmt.Println("Ikkinchi raqamni kiriting:")
 		fmt.Scan(&num2)
-		
+
 		var inn int
 		fmt.Println("Arifmetik operatsiyani tanlang")
 		fmt.Println("1.'+' Qo'shish")
@@ -29,8 +29,6 @@ func main() {
 			fmt.Println("Dastur yakunlandi.")
 			break
 		}
- 
-		
 
 		switch inn {
 		case 1:
@@ -47,28 +45,33 @@ func main() {
 			}
 		default:
 			fmt.Println("Noto'g'ri tanlov!")
-			break 
+			break
 		}
-		var input string  
+		var input string
 		fmt.Println("Davom ettirishni hohlaysizmi?")
-		fmt.Println("1.Yes")	
+		fmt.Println("1.Yes")
 		fmt.Println("2.NO")
 		fmt.Scan(&input)
 
-		var answer int 
-		if input == "1" || input == "Yes"|| input == "YES"{ 
-			
-			answer = 1 
-			
-			}else if input == "2" || input == "No"|| input == "NO"{
-			answer = 2 	
-			
+		var answer int
+		if input == "1" || input == "Yes" || input == "YES" {
 
-			}else {fmt.Println("Noto'g'ri tanlov.")
+			answer = 1
+
+		} else if input == "2" || input == "No" || input == "NO" {
+			answer = 2
+
+		} else {
+			fmt.Println("Noto'g'ri tanlov.")
 			return
-			}
+		}
 		switch answer {
-				case 1 : fmt.Println("Davom etamiz!") ;continue 
-				case 2 : fmt.Println("Yakunlandi.")};break 
-	} 
+		case 1:
+			fmt.Println("Davom etamiz!")
+			continue
+		case 2:
+			fmt.Println("Yakunlandi.")
+		}
+		break
+	}
 }
